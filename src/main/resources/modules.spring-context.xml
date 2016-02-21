@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+       <bean id="IMDBMoviesSearchService" class="com.ksubaka.entertainment.products.serviceImpl.IMDBMoviesSearchServiceImpl">
+           <constructor-arg name="imdbUrl" value="http://www.omdbapi.com/?r=xml&amp;type=movie"/>
+       </bean>
+       <bean id="LastFMAlbumSearchService" class="com.ksubaka.entertainment.products.serviceImpl.LastFMAlbumSearchServiceImpl">
+           <constructor-arg name="lastFMUrl" value="http://ws.audioscrobbler.com/2.0/?method=album.getInfo"/>
+       </bean>
+</beans>
